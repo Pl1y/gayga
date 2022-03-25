@@ -1,6 +1,6 @@
-
+document.getElementById('jserror').style.display = "none";
 var video = document.querySelector("#videoElement");
-var vidiv = document.getElementById('videoFeed')
+var error = document.getElementById('videoError')
 var text = document.getElementById('funnyText')
 if (navigator.mediaDevices.getUserMedia) {
   navigator.mediaDevices.getUserMedia({ video: true })
@@ -10,10 +10,9 @@ if (navigator.mediaDevices.getUserMedia) {
         text.style.display = "block";
         })
     .catch((error) => {
-            vidiv.innerHTML += '<p class="bg-danger p-3 rounded-pill">Error showing your stupid face 😥<br>Please allow camera access 🥺</p>';
+        error.style.display = "block";
         });
 }
-
 /*
 const webcamElement = document.getElementById('videoElement');
 const canvasElement = document.getElementById('canvas');

@@ -14,3 +14,8 @@ body{
     margin: auto;
     align-items: center;
 }
+#videoElement {
+    width: 95%;
+    max-height: 80%;
+    margin: auto;
+}
