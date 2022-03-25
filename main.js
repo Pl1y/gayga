@@ -8,9 +8,9 @@ if (navigator.mediaDevices.getUserMedia) {
         video.srcObject = stream;
         video.style.display = "block";
         text.style.display = "block";
+        error.style.display = "none";
         })
     .catch((error) => {
-        error.style.display = "block";
         });
 }
 /*
